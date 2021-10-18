@@ -1,5 +1,9 @@
+val kosaList = mutableListOf("Eli","Mordoc","Sophie")
+val lastName = mutableListOf("IronFoot","Frensworth","Baggins")
+val somList = mutableListOf("kosa","bsbosa","mlfof")
+val uniqueKosa = mutableSetOf<String>()
 fun main() {
-    //val listOfNumbers = File("Data/listOfNumbers.txt").readText().split("\n")
+    /* val listOfNumbers = File("Data/listOfNumbers.txt").readText().split("\n")
     //  println(listOfNumbers.maxOf { it })
 /*
 al sightings = mutableListOf<String>()
@@ -31,5 +35,28 @@ al sightings = mutableListOf<String>()
     for(name in nameToAge.keys ){
         val age = nameToAge[name]
         println("$name is $age years old..")
+    }*/
+
+    repeat(10){
+        val first = kosaList.random()
+        val last = lastName.random()
+        val name = "$first $last"
+        uniqueKosa += name
+
+    }
+
+    println(uniqueKosa)
+    var orderCount = 0
+    while ( orderCount <= 9){
+        placeOrder(
+            uniqueKosa.random(),
+            somList.random()
+        )
+        orderCount++
     }
 }
+
+fun placeOrder (kosaList:String,carotList:String){
+
+}
+
